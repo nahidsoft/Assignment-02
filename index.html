@@ -118,7 +118,180 @@
             display: hidden;
         }
     
+        footer{
+            background: url("./assets/footer-bg.png");
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            background-repeat: no-repeat;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            animation: logoScale 2.5s ease-out forwards infinite;
+        }
+              @keyframes logoScale {
 
+            0% {
+                 opacity: 0;
+                 transform: scale(0.9);
+         }
+            60% {
+                opacity: 1;
+                transform: scale(1.05);
+        }
+            100% {
+                transform: scale(1);
+        }
+}
+ @media screen and (max-width: 567px){
+            .position{
+            width: 70%;
+            height: 70%;
+            top: 50px;
+        }
+        nav ul, nav button{
+            display: none;
+        }
+        #banner .banner-text{
+            margin-top: 50px;
+        }
+         #about .about-content,
+        #features .feature-box,
+         #episodes .epi-content {
+            margin-right: 10vw;
+            margin-left: 10vw;
+        }
+            #features .feature-items h3,
+            #episodes .epi-box  h3,
+            #episodes .host h3{
+                font-size: 1.1rem;
+            }
+            #features .feature-items p, 
+            #episodes .card p,
+            .host .host-box p,
+            footer p{
+            font-size: 0.8rem;
+        }
+        #features, #episodes .card{
+            background-color: #230E3D;
+            width: 100%;
+            height: 80%;
+        }
+        }
+
+        /* make images and svg responsive */
+        img, svg { max-width:100%; height:auto; display:block; }
+
+        /* responsive video embed */
+        .video-wrapper{
+            width:100%;
+            max-width:920px;
+            aspect-ratio:16/9;
+            overflow:hidden;
+            border-radius:12px;
+            background:#000;
+        }
+        .video-wrapper iframe{
+            width:100%;
+            height:100%;
+            border:0;
+            display:block;
+        }
+
+        /* button base + animated gradient sheen */
+        .btn{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            gap:10px;
+            padding:10px 18px;
+            border-radius:999px;
+            font-weight:700;
+            cursor:pointer;
+            position:relative;
+            overflow:hidden;
+            transition:transform .18s ease, box-shadow .18s ease, opacity .12s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* mapping token + gradient fallback */
+        .from-pink-500{ --tw-from: #ec4899; background: linear-gradient(90deg, var(--tw-from) 0%, #f59e0b 100%); color:#fff; }
+        .bg-linear-to-r.from-pink-500.to-yellow-400{ background: linear-gradient(90deg,#ec4899 0%, #f59e0b 100%); color:#fff; }
+
+        /* hover / focus effects */
+        .btn:hover,
+        .btn:focus{
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+            outline: none;
+        }
+
+        /* sheen effect */
+        .btn::before{
+            content: "";
+            position: absolute;
+            top: -40%;
+            left: -60%;
+            width: 40%;
+            height: 200%;
+            background: linear-gradient(120deg, rgba(255,255,255,0.06), rgba(255,255,255,0.22) 50%, rgba(255,255,255,0.02));
+            transform: rotate(20deg) translateX(-100%);
+            transition: transform .9s cubic-bezier(.2,.9,.2,1);
+            pointer-events: none;
+        }
+        .btn:hover::before,
+        .btn:focus::before{
+            transform: rotate(20deg) translateX(220%);
+        }
+
+        /* subtle active press */
+        .btn:active{ transform: translateY(-2px) scale(.995); }
+
+        /* make heading buttons adapt on small screens */
+        .heading-btns .btn{
+            width:198px;
+            height:52px;
+        }
+        @media screen and (max-width: 567px){
+            .heading-btns .btn{
+                width:auto;
+                padding:12px 16px;
+                height:auto;
+                font-size:0.95rem;
+            }
+
+            /* hero visuals scale better on very small screens */
+            .position{
+                width:86%;
+                height:auto;
+                top:36px;
+            }
+            .position .phone{
+                position:relative;
+                top:0;
+                left:0;
+                transform:none;
+                max-width:48%;
+                margin:0 auto;
+            }
+
+            /* nav simplified on mobile */
+            nav ul, nav button{ display:none; }
+
+            /* video responsive stacking */
+            .epi-box{ flex-direction:column; }
+            .card{ width:100%; max-width:720px; }
+
+            /* footer spacing */
+            footer { padding:28px 16px; }
+        }
+
+        /* medium screens tweaks */
+        @media screen and (min-width:568px) and (max-width:1024px){
+            .video-wrapper{ max-width:760px; }
+            .heading-btns .btn{ width:170px; }
+        }
 
     </style>
 </head>
@@ -286,7 +459,21 @@ Join thousands of young professionals and tech enthusiasts who start their day w
         </div>
     </section>
 
+    <!-- footer section -->
+            <footer id="footer" class="text-white p-6 ">
+            <div class="flex flex-col gap-6 items-center justify-center text-center">
+            <img src="./assets/TechWave.png" alt="">
+            <!-- <h1 class="font-bold text-2xl ">Tech<span class="from-pink-500" style="color: rgb(222, 30, 94);">Wave</span></h1> -->
+            <div class="socials lg:flex grid grid-cols-2 justify-evenly text-center gap-2 lg:gap-8">
+                <div ><img src="./assets/spotify.png" alt="" class="inline-block "><span class="ml-3">Spotify</span ></div>
+                <div><img class="inline-block" src="./assets/apple-podcast.png" alt=""><span class="ml-3">Apple Podcasts</span></div>
+                <div><img class="inline-block" src="./assets/twitter.png" alt=""><span class="ml-3">Twitter</span></div>
+                <div><img class="inline-block" src="./assets/youtube-podcast.png" alt=""><span class="ml-3">YouTube</span></div>
+            </div>
+            <p>© 2026 TechWave Podcast. All rights reserved.</p>
+            </div>
+        </footer>
 
-    
+
 </body>
 </html>
