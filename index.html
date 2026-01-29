@@ -3,10 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <title>TechWave Podcast</title>
-    <link rel="stylesheet" href="./style/style.css">
-</head>
-<body>
+
+    <style>
+         *{
+                font-family: "Inter", Sans-serif;
+                box-sizing: border-box;
+            }
+            nav, #about {
+                background-color: rgba(26, 11, 46, 1);
+                width: 100%;
+            }
+
+            #episodes{
+                width: 100%;
+                background-color: #1A0B2E;
+            }
+
+            
+            nav ul{
+                width: 20%;
+            }
+             #banner{
+             position: relative;
+            background: url("assets/hero-bg.png");
+            background-size: cover;
+            background-position: center;
+            min-width: 100%;
+            background-repeat: no-repeat;
+        }
+        .position{
+            position: relative;
+            width: 50%;
+            height: 50%;
+            /* width: 40%;
+            height: 40%; */
+            /* border: 2px solid white; */
+            z-index: 10;
+            top: 25%;
+        }
+        .position .phone{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+        }
+
+        .heading-btns .btn{
+    display: flex;
+    width: 198px;
+    height: 52px;
+    gap: 10px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+        }
+         #about .about-content, 
+         #features .feature-box,
+         #episodes .epi-content,
+         #episodes .epi-box ,
+         #episodes .host{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .about-content h3{
+            color: green;
+            font-size: xx-large;
+            font-weight: 600;
+        }
+         #features .feature-items h3{
+            font-size: 1.875rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin: 1.2rem;
+        }
+        #features .feature-items p,
+         #episodes .card p{
+            margin: 1.2rem;
+            font-size: 1.2rem;
+        }
+        .feature-box .feature-items{
+            background-color: #351165;
+            border-radius: 10%;
+            display: grid;
+            align-items: center;
+        }
     
+
+
+    </style>
+</head>
+
+
+<body>
+    <header class="">
+            <nav class="flex justify-around items-center ax-w-7xl mx-auto px-6 py-4 text-white">
+            <div class="logo">
+                <img src="./assets/TechWave.png" alt="company logo">
+            </div>
+            <ul class="menu flex justify-between ml-6 mr-6 text-sm">
+                <li><a href="">About</a></li>
+                <li><a href="">Episodes</a></li>
+                <li><a href="">Host</a></li>
+            </ul>
+            <button class="flex gap-1.5 bg-linear-to-r from-pink-500 to-yellow-400 rounded-2xl p-2 text-black font-bold">Subscirbe <img src="./assets/ArrowRight.png"></button>
+            <img class=" lg:hidden" src="./assets/hamburger-menu.png" alt="">
+            </nav>
+        <section id="banner" class="text-center">
+             <div class="position  mx-auto text-white  flex items-center justify-center rounded-full text-7xl ">
+                <span class="new z-20 absolute top-1 right-20.5 lg:right-50 lg:text-xl bg-green-400 text-black
+      text-xs font-semibold lg:px-4 px-2 py-1 rounded-full">New</span>
+                <img src="./assets/hero-circle.png" class="relative w-2/4 top-0 left-0">
+                <img src="./assets/microphone.png" class="phone absolute w-1/4 " alt="">
+             </div>
+            <div class="banner-text text-amber-300"> 
+            <div class="small-info">
+            <h1 class="lg:text-5xl font-bold mb-2 text-4xl text-white">TechWave</h1>
+            <p class="h1-text max-w-md mx-auto mb-6 text-sm text-purple-200">Your daily dose of tech insights, productivity hacks, and personal growth</p>
+            <div class="heading-btns lg:flex-row items-center flex-col flex lg:justify-center gap-3">
+                <button class="btn rounded-full font-semibold text-black
+        bg-linear-to-r from-pink-500 to-yellow-400
+        hover:opacity-90 flex "><img src="./assets/spotify.png" ><span class="text-white">Listen on Spotify</span> </button>
+                <button class="btn border-green-600 border-2 rounded-3xl text-green-500">
+                    <img src="./assets/message.png" alt="">Subscribe</button>
+            </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- about section -->
+
+      <section id="about" class="text-white">
+        <div class="about-content p-6 text-center">
+        <h2 class=" p-6 text-2xl sm:text-3xl lg:text-4xl font-bold ">About the Podcast</h2>
+        <p class=" sm:text-xs md:text-lg lg:text-xl">TechWave is your go-to podcast for staying ahead in the fast-paced world of technology.
+We break down complex topics into digestible insights, explore productivity strategies that actually work,
+and share stories of personal growth from industry leaders.
+<br><br><br>
+Join thousands of young professionals and tech enthusiasts who start their day with TechWave.</p>
+<hr class="mt-4 mb-4">
+        <div class="performance lg:flex grid grid-cols-2 lg:flex-row lg:justify-between lg:items-center gap-5 m-4">
+            <div class="items">
+                <h3>150K+</h3>
+                <p>Monthly Listeners</p>
+            </div>
+            <div class="items">
+                <h3>200+</h3>
+                <p>Episodes Published</p>
+            </div>
+            <div class="items">
+                <h3>4.9★</h3>
+                <p>Average Rating</p>
+            </div>
+            <div class="items">
+                <h3>50+</h3>
+                <p>Industry Experts</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
 </body>
 </html>
