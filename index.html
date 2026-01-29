@@ -128,14 +128,15 @@
     <header class="">
             <nav class="flex justify-around items-center ax-w-7xl mx-auto px-6 py-4 text-white">
             <div class="logo">
-                <img src="./assets/TechWave.png" alt="company logo">
+                <!-- <img src="./assets/TechWave.png" alt="company logo"> -->
+                <h1 class="font-bold text-2xl ">Tech<span class="from-pink-500" style="color: rgb(222, 30, 94);">Wave</span></h1>
             </div>
             <ul class="menu flex justify-between ml-6 mr-6 text-sm">
                 <li><a href="">About</a></li>
                 <li><a href="">Episodes</a></li>
                 <li><a href="">Host</a></li>
             </ul>
-            <button class="flex gap-1.5 bg-linear-to-r from-pink-500 to-yellow-400 rounded-2xl p-2 text-black font-bold">Subscirbe <img src="./assets/ArrowRight.png"></button>
+            <button class="flex gap-1.5 bg-linear-to-r from-pink-500 to-yellow-400 rounded-2xl p-2 text-black font-bold">Subscirbe <img src="./assets/Vector.png"></button>
             <img class=" lg:hidden" src="./assets/hamburger-menu.png" alt="">
             </nav>
         <section id="banner" class="text-center">
@@ -229,6 +230,63 @@ Join thousands of young professionals and tech enthusiasts who start their day w
     </section>
 
     <!-- episodes section -->
-     
+     <section id="episodes" class="epi-content text-white p-6 lg:pb-15 ">
+        <h2 class=" text-2xl sm:text-3xl lg:text-4xl font-bold text-center m-5 ">Featured Episodes</h2>
+        <div class="epi-box flex flex-col gap-10 items-center lg:flex-row">
+            <div class="card  p-2.5 flex flex-col gap-2.5 ">
+                <div class="video-wrapper">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QOKLW5ITEiI?si=7rjuQsnFgF0f2I8r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>
+                <div class="card-text mt-2">
+                <h3 class="text-sm pt-4 text-center lg:text-xl font-semibold">The Future of AI in Everyday Life</h3>
+                <p class="lg:mb-1.5">Exploring how artificial intelligence is transforming our daily routines and what to expect in the next decade.</p>
+                <div class="flex gap-3 ml-5"><img src="./assets/clock.png" alt="">
+                <span class=" ">42 min</span> </div>
+                </div>
+            </div>
+            <div class="card p-2.5 flex flex-col gap-2.5 ">
+                <div class="video-wrapper">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PLBYYdg0sfs?si=RDh2E-A23sH0H_yL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+                <div class="card-text mt-2">
+                <h3 class="text-sm pt-4 text-center lg:text-xl font-semibold">Building Better Habits for Remote Work</h3>
+                <p>Practical strategies for staying productive and maintaining work-life balance in a remote environment.</p>
+                <div class="flex gap-3 ml-5"><img src="./assets/clock.png" alt=""> <span class="mt-auto">19 min</span></div>
+                </div>
+            </div>
+            <div class="card p-2.5 flex flex-col gap-2.5 ">
+                <div class="video-wrapper">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YSHSHJKNi_U?si=o_ftZdmYS3Z_ndlA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>
+
+                <div class="card-text mt-4 ">
+                    <h3 class="text-sm p-4 text-center lg:text-xl  font-semibold">Career Growth in Tech: A Roadmap</h3>
+                    <p>Expert advice on navigating your tech career from junior developer to senior leadership roles.</p>
+                    <div class="flex gap-3 ml-5"> <img src="./assets/clock.png" alt=""><span class="mt-auto">26 min</span></div>
+                </div>
+            </div>
+                
+        </div>
+
+        <div class="host">
+            <h2 class=" mt-6 p-6 text-2xl sm:text-3xl lg:text-4xl font-bold text-center">Meet the Host</h2>
+            <div class="host-box flex lg:flex-row flex-col gap-10 items-center">
+                <div class=" lg:pl-4 host-img lg:flex  lg:justify-center lg:items-center">
+                    <img src="./assets/host.png" alt=""> </div>
+                <div class="host-text p-4 text-center lg:text-left">
+                <div><h3 class="text-sm pt-4 text-center lg:text-left lg:text-xl font-semibold">Alex Kumar</h3>
+                    <p >Tech entrepreneur, productivity expert, and lifelong learner. Alex has been in the tech industry for over 10 years, working with startups and Fortune 500 companies. Through TechWave, Alex shares insights from industry leaders and practical advice for anyone looking to grow in tech.</p>
+                    <div class="social-icons flex lg:justify-start lg:gap-6 justify-between p-6 lg:p-0">
+                    <span><img  src="./assets/linkedin.png" alt=""></span>
+                    <span><img src="./assets/x.png" alt=""></span>
+                    <span><img src="./assets/instagram.png" alt=""></span>
+                    <span><img src="./assets/youtube.png" alt=""></span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
 </body>
 </html>
